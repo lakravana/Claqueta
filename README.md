@@ -25,10 +25,10 @@ Este repositorio solo contiene las **descargas** y su documentación.
 1. Abre <https://claqueta.caravana.dev/>.
 2. **Importar:** arrastra ficheros o una carpeta (una carpeta de `.dng` cuenta como una secuencia). El navegador lee los metadatos.
 3. Rellena escena, plano, toma, versión, valoración y comentarios. Para guardar la ruta real del fichero, copia las rutas con *Ctrl+Mayús+C* en el Explorador de Windows y pégalas en la página.
-4. **Guardar:** al pulsarlo pide entrar con correo y contraseña. Sin cuenta puedes seguir trabajando, pero no se guarda.
+4. **Guardar:** al pulsarlo pide entrar con correo y contraseña, o crear una cuenta. Sin cuenta puedes seguir trabajando, pero no se guarda.
 5. **Catálogo, parte diario y exportación** (CSV, CSV y script para Resolve) están en la misma web, ya con tu cuenta.
 
-**Cuentas:** no hay registro público. Las crea el administrador del servidor; si quieres una, pídesela. Cada cuenta ve solo sus proyectos.
+**Cuentas:** en «Entrar» hay una pestaña **«Crear cuenta»** (nombre, correo y contraseña). Te registras tú mismo, sin esperar a nadie, y entras en el acto con 100 MB de espacio. Cada cuenta ve solo sus proyectos. No se verifica el correo (Claqueta no envía correo), y el administrador puede cerrar el registro. Los **administradores** pueden proteger su cuenta con verificación en dos pasos (Google Authenticator, con códigos de recuperación).
 
 **Privacidad:** el vídeo nunca se sube. Al servidor solo van los metadatos y el texto que escribes, más una miniatura del fotograma central. En ProRes, DNxHD, MXF y CinemaDNG esa miniatura la hace el servidor, así que **ese único fotograma** (o el DNG central) se envía para convertirlo y se borra al terminar.
 
@@ -82,7 +82,7 @@ Además: reconocimiento y emparejado de **proxies**, miniatura del fotograma cen
 - **BRAW sin miniatura** a propósito (el SDK de Blackmagic exige registro).
 - El script de **Resolve** solo se ha verificado con un simulador y una primera pasada real; puede necesitar ajustes de campos.
 - Solo Windows para la versión portátil. Probado con Chrome.
-- «Subir al servidor» requiere un servidor Claqueta propio; no se ofrece ninguno público.
+- «Subir al servidor» desde la portátil pide la dirección del servidor, tu correo y tu contraseña (y el código de dos pasos si la cuenta lo tiene). En la portátil no hay registro: la cuenta se crea antes en la web.
 
 ## Componentes de terceros
 
