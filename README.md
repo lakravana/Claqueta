@@ -10,7 +10,7 @@ Este repositorio solo contiene las **descargas** y su documentación.
 
 ## Web o portátil: cuándo usar cada una
 
-| | **Web** (<https://claqueta.caravana.dev/>) | **Portátil** (Windows) |
+| | **Web** (<https://claqueta.caravana.dev/>) | **Claqueta portátil** (Windows o macOS) |
 |---|---|---|
 | Úsala cuando… | tienes conexión y quieres **guardar y consultar el catálogo** desde cualquier equipo, o probar sin instalar nada | estás **en el set o sin internet**, o prefieres que nada salga de tu equipo |
 | Instalación | ninguna, solo un navegador (probado con Chrome) | descomprimir y abrir `Claqueta.bat` |
@@ -36,9 +36,9 @@ Este repositorio solo contiene las **descargas** y su documentación.
 
 | Fichero | Para qué | Tamaño |
 |---|---|---|
-| `Claqueta-portatil.zip` | Claqueta completa para **Windows 10/11**, autónoma: lleva PHP, ffmpeg y LibRaw. Sin internet, sin instalación y sin cuenta. | ~125 MB |
-| `Claqueta-portatil-macos-apple-silicon.zip` | Lo mismo para **macOS** con chip Apple (M1, M2, M3, M4…): lleva PHP y ffmpeg. | ~40 MB |
-| `Claqueta-portatil-macos-intel.zip` | Lo mismo para **macOS con procesador Intel**. | ~45 MB |
+| `Claqueta-portatil-windows.zip` | **Claqueta portátil Windows**: Claqueta completa para **Windows 10/11**, autónoma: lleva PHP, ffmpeg y LibRaw. Sin internet, sin instalación y sin cuenta. | ~125 MB |
+| `Claqueta-portatil-macos-apple-silicon.zip` | **Claqueta portátil macOS** para Macs con chip Apple (M1, M2, M3, M4…): lleva PHP y ffmpeg. | ~40 MB |
+| `Claqueta-portatil-macos-intel.zip` | **Claqueta portátil macOS** para Macs con **procesador Intel**. | ~45 MB |
 | `Claqueta.lua` | Script para **DaVinci Resolve** (también la versión gratuita, sin Python) que importa el material catalogado con sus metadatos. | ~20 KB |
 
 ## A quién va dirigido
@@ -49,9 +49,11 @@ Este repositorio solo contiene las **descargas** y su documentación.
 
 No es un gestor de activos ni un programa de copia y verificación de tarjetas.
 
-## Cómo se usa (portátil)
+## Cómo se usa la portátil
 
-1. Descarga `Claqueta-portatil.zip` de la última Release y descomprímelo donde quieras.
+### Windows
+
+1. Descarga `Claqueta-portatil-windows.zip` de la última Release y descomprímelo donde quieras.
 2. Abre `Claqueta.bat`. Se abre el navegador en `http://127.0.0.1:8099/`. Deja abierta la ventana negra mientras trabajas.
 3. Arrastra tarjetas o carpetas, rellena escena, plano y toma.
 4. Exporta desde «Exportar»: CSV, parte diario o script de Resolve.
@@ -60,7 +62,7 @@ Todo queda en la carpeta `datos` junto al `.bat`. Para actualizar, descomprime l
 
 La primera vez Windows puede pedir permiso para instalar el runtime de Visual C++ (viene incluido). Claqueta solo atiende a tu propio equipo (127.0.0.1), no a la red.
 
-### Portátil en macOS
+### macOS
 
 > **Sin probar en un Mac real.** Está montada con binarios ya compilados (PHP de static-php-cli y ffmpeg de osxexperts.net) y la aplicación se ha comprobado en Linux con el mismo contenido del ZIP, pero no en macOS. Si algo falla, abre un *issue*.
 
@@ -94,7 +96,7 @@ Además: reconocimiento y emparejado de **proxies**, miniatura del fotograma cen
 - **ProRes RAW** sin probar con un fichero real.
 - **BRAW sin miniatura** a propósito (el SDK de Blackmagic exige registro).
 - El script de **Resolve** solo se ha verificado con un simulador y una primera pasada real; puede necesitar ajustes de campos.
-- La portátil de **Windows** es la probada; la de **macOS** no se ha probado en un Mac real y no hace miniaturas de CinemaDNG sin Homebrew. Probado con Chrome.
+- La portátil de **Windows** es la probada (y la que también se descarga desde la web, ya con la dirección del servidor puesta); la de **macOS** no se ha probado en un Mac real y no hace miniaturas de CinemaDNG sin Homebrew. Probado con Chrome.
 - «Subir al servidor» desde la portátil pide la dirección del servidor, tu correo y tu contraseña (y el código de dos pasos si la cuenta lo tiene). En la portátil no hay registro: la cuenta se crea antes en la web.
 
 ## Componentes de terceros
