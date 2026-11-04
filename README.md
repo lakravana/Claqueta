@@ -4,7 +4,33 @@
 
 **Claqueta** es un catálogo de metadatos de rodaje. Arrastras vídeos, audio o carpetas a la página y **el navegador lee los metadatos del fichero local: el vídeo nunca se sube**. Anotas escena, plano, toma, versión, valoración y comentarios, y exportas al montaje (DaVinci Resolve) o a un parte diario.
 
-Este repositorio solo contiene las **descargas** y su documentación. Los ficheros están en [**Releases**](../../releases/latest).
+**Web:** <https://claqueta.caravana.dev/> · **Descargas:** [Releases](../../releases)
+
+Este repositorio solo contiene las **descargas** y su documentación.
+
+## Web o portátil: cuándo usar cada una
+
+| | **Web** (<https://claqueta.caravana.dev/>) | **Portátil** (Windows) |
+|---|---|---|
+| Úsala cuando… | tienes conexión y quieres **guardar y consultar el catálogo** desde cualquier equipo, o probar sin instalar nada | estás **en el set o sin internet**, o prefieres que nada salga de tu equipo |
+| Instalación | ninguna, solo un navegador (probado con Chrome) | descomprimir y abrir `Claqueta.bat` |
+| Cuenta | **No hace falta para importar** y rellenar. Sí para **guardar** y ver el catálogo | no hace falta |
+| Dónde se guarda | en el servidor, por cuenta (100 MB cada una) | en la carpeta `datos` de tu equipo |
+| Vídeo | se lee en tu navegador y **no se sube** | se lee en tu equipo |
+
+**Flujo típico:** en el set, con la portátil, catalogas las tarjetas sin conexión. Al volver, entras en la web y usas «Subir al servidor» para pasar lo hecho a tu cuenta, sin duplicar clips. Desde ahí exportas a Resolve o imprimes el parte diario.
+
+### Cómo usar la web
+
+1. Abre <https://claqueta.caravana.dev/>.
+2. **Importar:** arrastra ficheros o una carpeta (una carpeta de `.dng` cuenta como una secuencia). El navegador lee los metadatos.
+3. Rellena escena, plano, toma, versión, valoración y comentarios. Para guardar la ruta real del fichero, copia las rutas con *Ctrl+Mayús+C* en el Explorador de Windows y pégalas en la página.
+4. **Guardar:** al pulsarlo pide entrar con correo y contraseña. Sin cuenta puedes seguir trabajando, pero no se guarda.
+5. **Catálogo, parte diario y exportación** (CSV, CSV y script para Resolve) están en la misma web, ya con tu cuenta.
+
+**Cuentas:** no hay registro público. Las crea el administrador del servidor; si quieres una, pídesela. Cada cuenta ve solo sus proyectos.
+
+**Privacidad:** el vídeo nunca se sube. Al servidor solo van los metadatos y el texto que escribes, más una miniatura del fotograma central. En ProRes, DNxHD, MXF y CinemaDNG esa miniatura la hace el servidor, así que **ese único fotograma** (o el DNG central) se envía para convertirlo y se borra al terminar.
 
 ## Qué se descarga
 
