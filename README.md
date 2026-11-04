@@ -37,6 +37,8 @@ Este repositorio solo contiene las **descargas** y su documentación.
 | Fichero | Para qué | Tamaño |
 |---|---|---|
 | `Claqueta-portatil.zip` | Claqueta completa para **Windows 10/11**, autónoma: lleva PHP, ffmpeg y LibRaw. Sin internet, sin instalación y sin cuenta. | ~125 MB |
+| `Claqueta-portatil-macos-apple-silicon.zip` | Lo mismo para **macOS** con chip Apple (M1, M2, M3, M4…): lleva PHP y ffmpeg. | ~40 MB |
+| `Claqueta-portatil-macos-intel.zip` | Lo mismo para **macOS con procesador Intel**. | ~45 MB |
 | `Claqueta.lua` | Script para **DaVinci Resolve** (también la versión gratuita, sin Python) que importa el material catalogado con sus metadatos. | ~20 KB |
 
 ## A quién va dirigido
@@ -57,6 +59,17 @@ No es un gestor de activos ni un programa de copia y verificación de tarjetas.
 Todo queda en la carpeta `datos` junto al `.bat`. Para actualizar, descomprime la versión nueva y copia en ella tu carpeta `datos`.
 
 La primera vez Windows puede pedir permiso para instalar el runtime de Visual C++ (viene incluido). Claqueta solo atiende a tu propio equipo (127.0.0.1), no a la red.
+
+### Portátil en macOS
+
+> **Sin probar en un Mac real.** Está montada con binarios ya compilados (PHP de static-php-cli y ffmpeg de osxexperts.net) y la aplicación se ha comprobado en Linux con el mismo contenido del ZIP, pero no en macOS. Si algo falla, abre un *issue*.
+
+1. Elige tu versión: menú Apple › *Acerca de este Mac*. Con «Chip: Apple…» es `apple-silicon`; si pone Intel, `intel`.
+2. Descomprime el ZIP.
+3. **Primera vez:** macOS bloquea lo descargado. Abre la Terminal, escribe `xattr -dr com.apple.quarantine ` (con un espacio al final), arrastra la carpeta `Claqueta` a la ventana y pulsa Intro. Si prefieres, clic derecho en `Claqueta.command` › *Abrir*, y *Ajustes del Sistema › Privacidad y seguridad › Permitir de todos modos* si lo pide.
+4. Abre `Claqueta.command`. Se abre el navegador en `http://127.0.0.1:8099/`. Deja abierta la ventana de Terminal mientras trabajas.
+
+Todo queda en la carpeta `datos`. **Diferencia con Windows:** LibRaw no se puede incluir en macOS, así que los CinemaDNG se catalogan igual pero **sin miniatura**, salvo que instales LibRaw con Homebrew (`brew install libraw`), que Claqueta detecta solo.
 
 ## Cómo se usa el script de Resolve
 
@@ -81,7 +94,7 @@ Además: reconocimiento y emparejado de **proxies**, miniatura del fotograma cen
 - **ProRes RAW** sin probar con un fichero real.
 - **BRAW sin miniatura** a propósito (el SDK de Blackmagic exige registro).
 - El script de **Resolve** solo se ha verificado con un simulador y una primera pasada real; puede necesitar ajustes de campos.
-- Solo Windows para la versión portátil. Probado con Chrome.
+- La portátil de **Windows** es la probada; la de **macOS** no se ha probado en un Mac real y no hace miniaturas de CinemaDNG sin Homebrew. Probado con Chrome.
 - «Subir al servidor» desde la portátil pide la dirección del servidor, tu correo y tu contraseña (y el código de dos pasos si la cuenta lo tiene). En la portátil no hay registro: la cuenta se crea antes en la web.
 
 ## Componentes de terceros
