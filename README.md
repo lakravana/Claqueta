@@ -1,4 +1,4 @@
-# Claqueta — descargas
+# Claqueta
 
 > **Estado: beta.** Puede cambiar sin aviso y hay partes sin probar con material real (ver [Limitaciones](#limitaciones)).
 
